@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 
 CART_SESSION_ID = 'cart'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 # Application definition
 
