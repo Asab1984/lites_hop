@@ -31,7 +31,6 @@ class OrderItemInLine(admin.TabularInline):
     raw_id_fields = ['product']
 
 
-
 class OrderAdmin(admin.ModelAdmin):
 
     actions = [export_to_csv]
@@ -41,6 +40,7 @@ class OrderAdmin(admin.ModelAdmin):
                     'created', 'updated']
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInLine]
+
 
 admin.site.register(Order, OrderAdmin)
 
